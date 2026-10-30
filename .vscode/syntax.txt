@@ -1,0 +1,69 @@
+Algorithme TutorielCompilateur
+// Ceci est un commentaire, il sera ignoré par le compilateur.
+
+Variables:
+    // Déclaration des variables classiques
+    n, i, somme : Entier
+    moyenne : Reel
+    estValide : Booléen
+
+    // Déclaration des tableaux
+    T[3] : Entier       // Un tableau de taille fixe (3 cases)
+    dynamique[] : Entier // Un tableau de taille dynamique (vide au début)
+
+Début
+    // 1. AFFECTATIONS ET MOTS-CLÉS
+    somme <- 0
+    estValide <- Vrai   // Supporte Vrai / Faux
+
+    // 2. ENTRÉES / SORTIES
+    Ecrire("--- Bienvenue dans le compilateur ---")
+    Ecrire("Entrez un nombre limite :")
+    Lire(n)
+
+    // 3. CONDITIONS (Si / Sinon Si / Sinon)
+    Si (n < 0) Alors
+        Ecrire("Le nombre est négatif !")
+        estValide <- Faux
+    Sinon Si (n = 0) Alors
+        Ecrire("Le nombre est nul.")
+    Sinon
+        Ecrire("Le nombre est strictement positif.")
+    Fin Si
+
+    // 4. LECTURE MULTIPLE SUR UNE LIGNE ET BOUCLE POUR
+    Si (estValide = Vrai) Alors
+        Ecrire("Tapez 3 nombres séparés par un espace :")
+        // Grâce à notre mise à jour, on peut taper "10 20 30" puis Entrée
+        Lire(T[0], T[1], T[2]) 
+
+        Pour i <- 0 à 2 faire
+            somme <- somme + T[i]
+            
+            // Fonction Ajouter pour les tableaux dynamiques
+            Ajouter(dynamique, T[i] * 2) 
+        Fin Pour
+        
+        Ecrire("La somme de vos 3 nombres est :", somme)
+        Ecrire("Le premier nombre doublé stocké est :", dynamique[0])
+    Fin Si
+
+    // 5. BOUCLE TANT QUE, MODULO ET DIVISION ENTIÈRE
+    Ecrire("--- Test de la boucle Tant Que ---")
+    i <- 1
+    Tant Que (i <= 3) faire
+        Si (i mod 2 <> 0 et i div 1 = i) Alors
+            Ecrire(i, " est un nombre impair.")
+        Fin Si
+        i <- i + 1
+    Fin Tant Que
+
+    // 6. BOUCLE RÉPÉTER ... JUSQU'À
+    Ecrire("--- Test de la boucle Répéter ---")
+    i <- 0
+    Répéter // Repeter
+        Ecrire("Cette phrase s'affiche au moins une fois.")
+        i <- i + 1
+    Jusqu'à (i = 1) // Jusqua
+
+Fin

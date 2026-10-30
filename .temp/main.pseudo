@@ -1,0 +1,61 @@
+Algorithme DemoComplete
+Variables:
+    i, age <- 0 : entier
+    T[3] : entier
+Debut
+    Ecrire("=== TEST DE SYNTAXE ===")
+    
+    Ecrire("Entrez votre âge : ")
+    Lire(age)
+
+    Si age >= 18 ET age < 120 Alors
+        Ecrire("Vous êtes majeur.")
+    Sinon
+        Ecrire("Saisie mineure ou invalide.")
+    FinSi
+
+    Ecrire("Remplissage avec une boucle TantQue :")
+    i <- 0
+    TantQue i <> 3 Faire
+        T[i] <- age + i
+        i <- i + 1
+    FinTantQue
+
+    Ecrire("Affichage avec une boucle Pour et modulo :")
+    Pour i <- 0 a 2 Faire
+        Si T[i] MOD 2 = 0 Alors
+            Ecrire("Nombre pair trouvé : ")
+            Ecrire(T[i])
+        FinSi
+    FinPour
+FinAlgorithme DemoComplete
+Variables:
+    i, age <- 0 : entier
+    T[3] : entier
+Début
+    Ecrire("=== TEST DE SYNTAXE ===")
+    
+    Ecrire("Entrez votre âge : ")
+    Lire(age)
+
+    Si age >= 18 ET age < 120 Alors
+        Ecrire("Vous êtes majeur.")
+    Sinon
+        Ecrire("Saisie mineure ou invalide.")
+    FinSi
+
+    Ecrire("Remplissage avec une boucle TantQue :")
+    i <- 0
+    TantQue i <> 3 Faire
+        T[i] <- age + i
+        i <- i + 1
+    FinTantQue
+
+    Ecrire("Affichage avec une boucle Pour et modulo :")
+    Pour i <- 0 a 2 Faire
+        Si T[i] MOD 2 = 0 Alors
+            Ecrire("Nombre pair trouvé : ")
+            Ecrire(T[i])
+        FinSi
+    FinPour
+Fin

@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Exécuter l'Algorithme (main.algo)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/.vscode/run_algo.py",
+            "args": [
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
